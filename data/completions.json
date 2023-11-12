@@ -1,0 +1,683 @@
+{
+  "housing": {
+    "theme": [
+      {
+        "argument": "theme",
+        "type": "housing-theme"
+      }
+    ],
+    "parkour": [
+      "reset",
+      "checkpoint",
+      "leaderboard",
+      "clearleaderboard",
+      {
+        "literal": "removetime",
+        "then": {
+          "argument": "position",
+          "type": "integer",
+          "min": 1,
+          "max": 10
+        }
+      },
+      {
+        "literal": "announce",
+        "then": {
+          "argument": "mode",
+          "type": "choices",
+          "choices": [
+            "OFF",
+            "RECORD",
+            "ALL"
+          ]
+        }
+      }
+    ],
+    "housing": [
+      "log",
+      "players",
+      "kickguests",
+      "kickall",
+      "mailbox",
+      "fixpiston",
+      "clearbans",
+      "clearmutes",
+      "random",
+      "settings",
+      {
+        "literal": "kick",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "mute",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "unmute",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "ban",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "unban",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "name",
+        "then": {
+          "argument": "new name",
+          "type": "string"
+        }
+      }
+    ],
+    "visitingrule": [
+      "PUBLIC",
+      "PARTY",
+      "FRIEND",
+      "GUILD",
+      "PRIVATE"
+    ],
+    "team": [
+      {
+        "literal": "player",
+        "then": {
+          "argument": "player name",
+          "type": "player",
+          "then": {
+            "argument": "team name",
+            "type": "string"
+          }
+        }
+      },
+      {
+        "literal": "create",
+        "then": {
+          "argument": "team name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "edit",
+        "then": {
+          "argument": "team name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "delete",
+        "then": {
+          "argument": "team name",
+          "type": "string"
+        }
+      }
+    ],
+    "editstat": [
+      {
+        "argument": "player name",
+        "type": "player",
+        "then": {
+          "argument": "stat name",
+          "type": "word",
+          "then": {
+            "argument": "action",
+            "type": "housing-stat-action",
+            "then": {
+              "argument": "value",
+              "type": "long"
+            }
+          }
+        }
+      }
+    ],
+    "editglobalstat": [
+      {
+        "argument": "stat name",
+        "type": "word",
+        "then": {
+          "argument": "action",
+          "type": "housing-stat-action",
+          "then": {
+            "argument": "value",
+            "type": "long"
+          }
+        }
+      }
+    ],
+    "editteamstat": [
+      {
+        "argument": "team name",
+        "type": "word",
+        "then": {
+          "argument": "stat name",
+          "type": "word",
+          "then": {
+            "argument": "action",
+            "type": "housing-stat-action",
+            "then": {
+              "argument": "value",
+              "type": "long"
+            }
+          }
+        }
+      }
+    ],
+    "setsky": [
+      "OVERWORLD",
+      "NETHER",
+      "THE_END"
+    ],
+    "setbiome": [
+      "JUNGLE",
+      "PLAINS",
+      "ROOFED_FOREST",
+      "DESERT",
+      "MESA",
+      "FOREST",
+      "COLD_TAIGA",
+      "HELL",
+      "SKY"
+    ],
+    "setvisibility": [
+      {
+        "argument": "amount",
+        "type": "integer",
+        "min": 0,
+        "max": 150
+      }
+    ],
+    "setweather": [
+      "SUNNY",
+      "RAINING",
+      "STORMING",
+      "THUNDER"
+    ],
+    "function": [
+      {
+        "literal": "edit",
+        "then": {
+          "argument": "function name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "create",
+        "then": {
+          "argument": "function name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "delete",
+        "then": {
+          "argument": "function name",
+          "type": "string"
+        }
+      }
+    ],
+    "custommenu": [
+      {
+        "literal": "edit",
+        "then": {
+          "argument": "menu name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "create",
+        "then": {
+          "argument": "menu name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "delete",
+        "then": {
+          "argument": "menu name",
+          "type": "string"
+        }
+      }
+    ],
+    "command": [
+      {
+        "literal": "edit",
+        "then": {
+          "argument": "command name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "create",
+        "then": {
+          "argument": "command name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "delete",
+        "then": {
+          "argument": "command name",
+          "type": "string"
+        }
+      }
+    ],
+    "layout": [
+      {
+        "literal": "edit",
+        "then": {
+          "argument": "layout name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "create",
+        "then": {
+          "argument": "layout name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "delete",
+        "then": {
+          "argument": "layout name",
+          "type": "string"
+        }
+      }
+    ],
+    "region": [
+      {
+        "literal": "edit",
+        "then": {
+          "argument": "region name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "create",
+        "then": {
+          "argument": "region name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "delete",
+        "then": {
+          "argument": "region name",
+          "type": "string"
+        }
+      }
+    ],
+    "gamemode": [
+      "CREATIVE",
+      "SURVIVAL",
+      "ADVENTURE"
+    ]
+  },
+  "global": {
+    "party": [
+      "leave",
+      "list",
+      "mute",
+      "private",
+      "warp",
+      "kickoffline",
+      "disband",
+      {
+        "literal": "accept",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "demote",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "invite",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "kick",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "poll",
+        "then": {
+          "argument": "question",
+          "type": "word",
+          "then": {
+            "argument": "answer answer answer...",
+            "type": "string"
+          }
+        }
+      }
+    ],
+    "guild": [
+      "disband",
+      "discord",
+      "help",
+      "history",
+      "info",
+      "leave",
+      "log",
+      "members",
+      "menu",
+      "motd",
+      "mypermissions",
+      "notifications",
+      "online",
+      "onlinemode",
+      "party",
+      "permissions",
+      "quest",
+      "slow",
+      "toggle",
+      "top",
+      "list",
+      {
+        "literal": "accept",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "chat",
+        "then": {
+          "argument": "message",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "create",
+        "then": {
+          "argument": "guild name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "demote",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "invite",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "join",
+        "then": {
+          "argument": "guild name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "kick",
+        "then": {
+          "argument": "player name",
+          "type": "player",
+          "then": {
+            "argument": "reason",
+            "type": "string"
+          }
+        }
+      },
+      {
+        "literal": "member",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "mute",
+        "then": {
+          "argument": "player name",
+          "type": "player",
+          "then": {
+            "argument": "time",
+            "type": "time"
+          }
+        }
+      },
+      {
+        "literal": "officerchat",
+        "then": {
+          "argument": "mesasge",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "promote",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "rename",
+        "then": {
+          "argument": "guild name",
+          "type": "string"
+        }
+      },
+      {
+        "literal": "setrank",
+        "then": {
+          "argument": "player name",
+          "type": "player",
+          "then": {
+            "argument": "guild rank",
+            "type": "word"
+          }
+        }
+      },
+      {
+        "literal": "settings",
+        "then": {
+          "argument": "setting",
+          "type": "word",
+          "then": {
+            "argument": "value",
+            "type": "word"
+          }
+        }
+      },
+      {
+        "literal": "tag",
+        "then": {
+          "argument": "guild tag",
+          "type": "word"
+        }
+      },
+      {
+        "literal": "tagcolor",
+        "then": {
+          "argument": "tag color",
+          "type": "word"
+        }
+      },
+      {
+        "literal": "transfer",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "unmute",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      }
+    ],
+    "particlequality": [
+      "OFF",
+      "LOW",
+      "MEDIUM",
+      "HIGH",
+      "EXTREME"
+    ],
+    "friend": [
+      "help",
+      "notifications",
+      "removeall",
+      {
+        "literal": "accept",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "add",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "deny",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "nickname",
+        "then": {
+          "argument": "friend name",
+          "type": "player",
+          "then": {
+            "argument": "nickname",
+            "type": "string"
+          }
+        }
+      },
+      {
+        "literal": "remove",
+        "then": {
+          "argument": "friend name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "list",
+        "then": {
+          "argument": "page | best",
+          "type": "word"
+        }
+      },
+      {
+        "literal": "requests",
+        "then": {
+          "argument": "page",
+          "type": "integer",
+          "min": 1
+        }
+      }
+    ],
+    "ignore": [
+      "help",
+      "removeall",
+      {
+        "literal": "list",
+        "then": {
+          "argument": "page",
+          "type": "integer",
+          "min": 1
+        }
+      },
+      {
+        "literal": "add",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "literal": "remove",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      }
+    ],
+    "play": [
+      {
+        "argument": "gamemode",
+        "type": "gamemode"
+      }
+    ],
+    "setlanguage": [
+      {
+        "argument": "language",
+        "type": "language"
+      }
+    ],
+    "setstatus": [
+      "Online",
+      "Away",
+      "Busy",
+      "Appear Offline"
+    ],
+    "chat": [
+      "all",
+      "party",
+      "guild",
+      "officer",
+      "skyblock-coop"
+    ]
+  },
+  "skyblock": {
+    "viewrecipe": [
+      {
+        "argument": "recipe",
+        "type": "skyblock-recipe"
+      }
+    ],
+    "getfromsacks": [
+      {
+        "argument": "item id",
+        "type": "skyblock-item",
+        "then": {
+          "argument": "amount",
+          "type": "integer",
+          "min": 1
+        }
+      }
+    ]
+  }
+}

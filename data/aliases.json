@@ -1,0 +1,23 @@
+{
+  "theme": ["thema", "tema"],
+  "parkour": ["park"],
+  "team": ["teams"],
+  "editstat": ["editstats", "editplayerstat", "editplayerstats"],
+  "editglobalstat": ["editglobalstats"],
+  "editteamstat": ["editteamstats"],
+  "setvisibility": ["visibility"],
+  "setweather": ["weather"],
+  "function": ["functions"],
+  "custommenu": ["menus", "custommenus"],
+  "command": ["commands"],
+  "layout": ["layouts"],
+  "region": ["regions"],
+  "party": ["Party", "p"],
+  "guild": ["g"],
+  "particlequality": ["quality"],
+  "friend": ["f"],
+  "setlanguage": ["lang", "setlang"],
+  "setstatus": ["status"],
+  "getfromsacks": ["gfs"],
+  "gamemode": ["gm"]
+} 
