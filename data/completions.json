@@ -327,6 +327,31 @@
       "CREATIVE",
       "SURVIVAL",
       "ADVENTURE"
+    ],
+    "gamerules": [
+      {
+        "argument": "gamerule",
+        "type": "housing-game-rule",
+        "then": {
+          "argument": "value",
+          "type": "boolean"
+        }
+      }
+    ],
+    "group": [
+      {
+        "argument": "group",
+        "type": "word",
+        "then": {
+          "argument": "action",
+          "type": "choices",
+          "choices": ["add", "remove"],
+          "then": {
+            "argument": "player name",
+            "type": "player"
+          }
+        }
+      }
     ]
   },
   "global": {
@@ -659,6 +684,28 @@
       "guild",
       "officer",
       "skyblock-coop"
+    ],
+    "teleport": [
+      {
+        "argument": "player name",
+        "type": "player",
+        "then": {
+          "argument": "player name",
+          "type": "player"
+        }
+      },
+      {
+        "argument": "player name",
+        "type": "player",
+        "then": {
+          "argument": "coordinates",
+          "type": "blockpos"
+        }
+      },
+      {
+        "argument": "coordinates",
+        "type": "blockpos"
+      }
     ]
   },
   "skyblock": {

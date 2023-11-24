@@ -1,4 +1,4 @@
-import { GamemodeArgumentType, HousingStatActionArgumentType, HousingThemeArgumentType, LanguageArgumentType, PlayerArgumentType, SkyblockItemArgumentType, SkyblockRecipeArgumentType } from "./customtypes";
+import { GamemodeArgumentType, HousingGameRuleArgumentType, HousingStatActionArgumentType, HousingThemeArgumentType, LanguageArgumentType, PlayerArgumentType, SkyblockItemArgumentType, SkyblockRecipeArgumentType } from "./customtypes";
 import { literal, argument, overrideHypixelCommand } from "./node";
 import { createGenericArrayType, getData } from "./utils";
 
@@ -43,6 +43,12 @@ function parseDataObject(object) {
       case "word":
         type = Commands.word();
         break;
+      case "boolean":
+        type = Commands.bool();
+        break;
+      case "blockpos":
+        type = Commands.blockPos();
+        break;
       case "skyblock-recipe":
         type = SkyblockRecipeArgumentType;
         break;
@@ -60,6 +66,9 @@ function parseDataObject(object) {
         break;
       case "language":
         type = LanguageArgumentType;
+        break;
+      case "housing-game-rule":
+        type = HousingGameRuleArgumentType;
         break;
     }
 

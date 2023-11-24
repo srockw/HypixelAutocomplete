@@ -5,12 +5,14 @@ const SkyblockItems = getData("skyblock-items");
 const HousingThemes = getData("housing-themes");
 const Gamemodes = getData("gamemodes");
 const Languages = getData("languages");
+const HousingGameRules = getData("housing-game-rules");
 
 export const SkyblockRecipeArgumentType = createGenericArrayType(SkyblockRecipes);
 export const SkyblockItemArgumentType = createGenericArrayType(SkyblockItems);
 export const HousingThemeArgumentType = createGenericArrayType(HousingThemes);
 export const GamemodeArgumentType = createGenericArrayType(Gamemodes);
 export const LanguageArgumentType = createGenericArrayType(Languages);
+export const HousingGameRuleArgumentType = createGenericArrayType(HousingGameRules);
 export const HousingStatActionArgumentType = createGenericArrayType(["inc", "dec", "set", "multiply", "divide"]);
 export const SupportedTypesArgumentType = createGenericArrayType(["global", "housing", "skyblock"]);
 
