@@ -195,6 +195,11 @@
       "SKY"
     ],
     "setvisibility": [
+      "0",
+      "25",
+      "50",
+      "100",
+      "150",
       {
         "argument": "amount",
         "type": "integer",
